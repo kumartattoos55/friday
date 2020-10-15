@@ -7,12 +7,12 @@ class Translation(object):
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "This is dam slow link bro! I wont waste my time on this. Get me a fast link"
-    DOWNLOAD_START = "Tathastu!! I am downloading ur link"
+    DOWNLOAD_START = "Tathastu!! I am downloading ur file"
     UPLOAD_START = "Tathastu!! I am uploading ur file"
     RCHD_BOT_API_LIMIT = "Size is very big.Do shrap dugi laude lag zaege. Neverthless, trying to upload."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Le hogai teri file upload! ab pheli fursat mei nikal"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n Hogaya na tera kam! Chal ab nikal pheli fursat mi \nUploaded in {} seconds."
+    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Le hogai teri file upload!"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n Hogaya na tera kam! \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription."
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
@@ -26,11 +26,9 @@ URL | filename | username | password"""
     CURENT_PLAN_DETAILS = """Current plan details
 --------
 Telegram ID: <code>{}</code>
-Plan name: Witcher ka dost has be tu
-Expires on: Zindgi bhar ka saath hai apna"""
-    HELP_USER = """There are multiple things I can do:
-
-Sunn be bdsk! Tere baap ka naukar ni hu laude! Phele Witcher se permission le
+Plan name: 2TB per month
+Expires on: 10/8/2099"""
+    HELP_USER = """I can do some work
 --------
 Send /me to know current plan details"""
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
@@ -48,7 +46,7 @@ Send /me to know current plan details"""
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
     INVALID_UPLOAD_BOT_URL_FORMAT = "URL format is incorrect. make sure your url starts with either http:// or https://. You can set custom file name using the format link | file_name.extension"
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
-    FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "Randi khana ni hai bdsk!!"
+    FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "Holy Shit!!"
     EXTRACT_ZIP_INTRO_ONE = "Send a compressed file first, Then reply /unzip command to the file."
     EXTRACT_ZIP_INTRO_THREE = "Analyzing received file. ⚠️ This might take some time. Please be patient. "
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")
