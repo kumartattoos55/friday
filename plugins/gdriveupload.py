@@ -9,7 +9,7 @@ import pyrogram
 
 from bot import logger
 from helper_funcs import gdriveTools
-from helper_funcs.bot_utils import get_readable_file_size
+from helper_funcs.bot_utils import get_readable_file_size, sanitize_file_name, sanitize_text
 from helper_funcs.extract_link_from_message import extract_link
 from helper_funcs.shortlink_generator import generate_short_link
 from plugins.dl_button import download_coroutine
@@ -25,6 +25,12 @@ else:
 @pyrogram.Client.on_message(pyrogram.Filters.command(["gleech"]))
 async def gdrive_upload(bot, update):
     dl_url, custom_file_name, _, _ = await extract_link(update.reply_to_message, "GLEECH")
+    txt = update.text
+    logger.info("command is : "+txt)
+    if txt.find("rename") > -1 and len(txt[txt.find("rename") + 7:]) > 0:
+        custom_file_name = txt[txt.find("rename") + 7:]
+        custom_file_name = await sanitize_file_name(custom_file_name)
+        custom_file_name = await sanitize_text(custom_file_name)
     logger.info(dl_url)
     logger.info(custom_file_name)
     reply_message = await bot.send_message(

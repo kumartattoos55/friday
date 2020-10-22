@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 import threading
 import time
@@ -9,6 +10,10 @@ MAGNET_REGEX = r"magnet:\?xt=urn:btih:[a-zA-Z0-9]*"
 
 URL_REGEX = r"(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+"
 
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
 
 class MirrorStatus:
     STATUS_UPLOADING = "Uploading"
@@ -118,3 +123,19 @@ def new_thread(fn):
         return thread
 
     return wrapper
+
+async def sanitize_text(input_text):
+    sanitized_data = input_text.translate({ord(c): "-" for c in "+|"})
+    sanitized_data = sanitized_data.translate({ord(c): "" for c in "™"})
+    sanitized_data = sanitized_data.replace("  ", " ")
+    return sanitized_data
+
+
+async def sanitize_file_name(input_text):
+    sanitized_fileName = input_text.translate({ord(c): "" for c in "/\:*?\"<>|"})
+    if Config.STRIP_FILE_NAMES:
+        for fname in Config.STRIP_FILE_NAMES.split("|"):
+            sanitized_fileName = sanitized_fileName.replace(fname, "").strip()
+        sanitized_fileName = sanitized_fileName.replace("Â", "").strip()
+        sanitized_fileName = sanitized_fileName.replace(".torrent", "").strip()
+    return sanitized_fileName;
