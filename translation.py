@@ -1,18 +1,18 @@
 class Translation(object):
-    START_TEXT = """DL bot by Lord Witcher"""
+    START_TEXT = """DL bot by V0ltron"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "This bot is free to use if u r witcher friend"
+    UPGRADE_TEXT = "This bot is free to use if u r V0ltron friend"
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "This is dam slow link bro! I wont waste my time on this. Get me a fast link"
-    DOWNLOAD_START = "Tathastu!! I am downloading ur file"
-    UPLOAD_START = "Tathastu!! I am uploading ur file"
+    DOWNLOAD_START = "Downloading ur file"
+    UPLOAD_START = "Uploading ur file"
     RCHD_BOT_API_LIMIT = "Size is very big.Do shrap dugi laude lag zaege. Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Le hogai teri file upload!"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n Hogaya na tera kam! \nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "File Uploaded Successfully"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription."
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
@@ -56,7 +56,7 @@ You can use /rename command after receiving file to rename it with custom thumbn
     CANCEL_STR = "Process Cancelled"
     ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
     FREE_USER_LIMIT_Q_SZE = """Cannot Process.
-Chutiya users only 1 request per 30 minutes.
+ users only 1 request per 30 minutes.
 /upgrade or Try 1800 seconds later."""
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     IFLONG_FILE_NAME = """File Name limit allowed by Telegram is {alimit} characters.

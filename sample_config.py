@@ -29,6 +29,12 @@ class Config(object):
     # maximum message length in Telegram
     MAX_MESSAGE_LENGTH = 4096
     # set timeout for subprocess
-    PROCESS_MAX_TIMEOUT = 3600
+    PROCESS_MAX_TIMEOUT = 100000
     # watermark file
     DEF_WATER_MARK_FILE = ""
+    SHORT_LINK_API_URL = os.environ.get("SHORT_LINK_API_URL", "https://za.gl/api")
+    SHORT_LINK_API_KEY = os.environ.get("SHORT_LINK_API_KEY", "")
+    IS_TEAM_DRIVE = os.environ.get("IS_TEAM_DRIVE", False)
+    USE_SERVICE_ACCOUNTS = os.environ.get("USE_SERVICE_ACCOUNTS", False)
+    INDEX_URL = os.environ.get("INDEX_URL", "https://team.pnkreddy11.workers.dev/0:")
+    parent_id = os.environ.get("GDRIVE_FOLDER_ID","1Vz8vrsGLHC8KSVVBjyEqIpLICzT2joOt")
