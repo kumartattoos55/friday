@@ -2,6 +2,7 @@ import asyncio
 import os
 import pathlib
 import time
+import urllib
 
 import aiohttp
 import pyrogram
@@ -44,7 +45,7 @@ async def gdrive_upload(bot, update):
                 custom_file_name = dl_url[int(dl_url.rindex("/")) + 1:int(dl_url.rindex("?"))]
             else:
                 custom_file_name = dl_url[dl_url.rindex("/") + 1:]
-
+        custom_file_name = urllib.parse.unquote(custom_file_name)
     download_directory = tmp_directory_for_each_user + "/" + custom_file_name
     async with aiohttp.ClientSession() as session:
         c_time = time.time()
