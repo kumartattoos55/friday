@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import logging
 import os
 import re
@@ -137,5 +140,9 @@ async def sanitize_file_name(input_text):
         for fname in Config.STRIP_FILE_NAMES.split("|"):
             sanitized_fileName = sanitized_fileName.replace(fname, "").strip()
         sanitized_fileName = sanitized_fileName.replace("Â", "").strip()
+        sanitized_fileName = sanitized_fileName.replace("–", "-").strip()
+        sanitized_fileName = sanitized_fileName.replace("\xc2\xa0"," ").strip()
+        sanitized_fileName = sanitized_fileName.replace("\x0a", "").strip()
         sanitized_fileName = sanitized_fileName.replace(".torrent", "").strip()
+        sanitized_fileName = sanitized_fileName.replace("  ", " ")
     return sanitized_fileName;
