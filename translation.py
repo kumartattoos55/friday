@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """DL bot by V0ltron"""
+    START_TEXT = """AnyDLBot By @KumarSwamiKS"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "This bot is free to use if u r V0ltron friend"
