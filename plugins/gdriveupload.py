@@ -45,7 +45,7 @@ async def gdrive_upload(bot, update):
     if not os.path.isdir(tmp_directory_for_each_user):
         os.makedirs(tmp_directory_for_each_user)
     if custom_file_name is None:
-        if dl_url.find('workers.dev') > -1:
+        if dl_url.find('workers.dev') > -1 or dl_url.find('uploadbot') > -1:
             custom_file_name = dl_url[dl_url.rindex("/")+1:]
         elif dl_url.find('seedr') > -1:
             custom_file_name = dl_url[int(dl_url.rindex("/")) + 1:int(dl_url.rindex("?"))]
