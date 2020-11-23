@@ -1,14 +1,14 @@
 class Translation(object):
-    START_TEXT = """AnyDLBot By @KumarSwamiKS"""
+    START_TEXT = """AnyDLMirBot By @KumarSwamiKS"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "This bot is free to use if u r V0ltron friend"
+    UPGRADE_TEXT = "This bot is free to use if you are @KumarSwamiKS friend"
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "This is dam slow link bro! I wont waste my time on this. Get me a fast link"
-    DOWNLOAD_START = "Downloading ur file"
-    UPLOAD_START = "Uploading ur file"
+    DOWNLOAD_START = "<b>Downloding To My Server</b> 📥 \n<code>Please Wait... Uploding Start Soon</code>"
+    UPLOAD_START = "<b>Uploding To Telegram</b> 📤 \n<code>😁😍👍Hurray!!!</code>"
     RCHD_BOT_API_LIMIT = "Size is very big.Do shrap dugi laude lag zaege. Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "File Uploaded Successfully"
