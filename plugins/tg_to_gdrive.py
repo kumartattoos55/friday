@@ -63,7 +63,7 @@ async def tg_to_gdrive_upload(bot, update):
         size = get_readable_file_size(get_path_size(download_directory))
         try:
             await bot.edit_message_text(
-                text="<b>Download Completed😍😂😁!!! \nNow Started Uploading In Progress</b>",
+                text="<b>Download Completed😍😂😁!!!</b> \n<code>Now Started Uploading In Progress...</code>",
                 chat_id=reply_message.chat.id,
                 message_id=reply_message.message_id
             )
